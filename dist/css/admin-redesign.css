@@ -147,7 +147,6 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	grid-area: admin-menu;
 	height: calc(100dvh - var(--wp-admin--admin-bar--height));
 	justify-content: stretch;
-	overflow-y: scroll;
 	padding-top: 16px;
 	padding-bottom: 16px;
 	padding-bottom: 32px;
@@ -274,7 +273,7 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 	pointer-events: none;
 }
 
-.wp-core-ui .notice[class] {
+.wp-core-ui .notice {
 	align-items: center;
 	background-color: var(--wp-components-color-background, #fff);
 	border: none;
@@ -286,19 +285,20 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 	padding: 8px 12px;
 }
 
-.wp-core-ui .notice.updated[class],
-	.wp-core-ui .notice.notice-success[class] {
+.wp-core-ui .notice.updated,
+	.wp-core-ui .notice.notice-success {
 		--wp-components-color-accent: #4ab866;
 		--wp-components-color-background: #eff9f1;
 	}
 
-.wp-core-ui .notice.error[class] {
+.wp-core-ui .notice.error,
+	.wp-core-ui .notice.notice-error {
 		--wp-components-color-accent: #cc1818;
 		--wp-components-color-background: #f4a2a2;
 	}
 
-.wp-core-ui .notice[class][aria-hidden="true"],
-	.wp-core-ui .notice.hidden[class] {
+.wp-core-ui .notice[aria-hidden="true"],
+	.wp-core-ui .notice.hidden {
 		display: none;
 	}
 

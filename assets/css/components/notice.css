@@ -1,5 +1,5 @@
 
-.wp-core-ui .notice[class] {
+.wp-core-ui .notice {
 	align-items: center;
 	background-color: var(--wp-components-color-background, #fff);
 	border: none;
@@ -16,7 +16,8 @@
 		--wp-components-color-background: #eff9f1;
 	}
 
-	&.error {
+	&.error,
+	&.notice-error {
 		--wp-components-color-accent: #cc1818;
 		--wp-components-color-background: #f4a2a2;
 	}

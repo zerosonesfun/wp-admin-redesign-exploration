@@ -119,7 +119,6 @@ body.block-editor-page {
 	grid-area: admin-menu;
 	height: calc(100dvh - var(--wp-admin--admin-bar--height));
 	justify-content: stretch;
-	overflow-y: scroll;
 	padding-block: 16px;
 	padding-block-end: 32px;
 	padding-inline: 16px;
