@@ -232,13 +232,14 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	position: absolute;
 	right: 6px;
 	top: calc(50% - 32px);
-	transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 	width: 4px;
 	z-index: 9999;
 }
 
 #admin-sidebar-resize-handle:hover {
 		background-color: var(--admin-redesign-surface-light-secondary);
+		transform: scale(1.1);
 	}
 
 #admin-sidebar-resize-handle:hover::after {
