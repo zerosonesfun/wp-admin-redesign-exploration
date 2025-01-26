@@ -1,0 +1,16 @@
+.wp-core-ui {
+
+	& .button[class],
+	& .page-title-action {
+		border-radius: 2px;
+		padding: 6px 12px;
+	}
+
+	& .button-secondary {
+		background-color: var(--admin-redesign-surface-light-primary);
+	}
+	
+	& .button-primary {
+		background-color: var(--admin-redesign-action-primary);
+	}
+}

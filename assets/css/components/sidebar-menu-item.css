@@ -1,0 +1,37 @@
+#adminmenu {
+
+	& li {
+
+		&:hover:where(:not(.wp-menu-separator)),
+		&:focus,
+		&.opensub {
+			background-color: var(--admin-redesign-surface-dark-secondary) !important;
+			border-radius: 2px;
+
+			& > a.menu-top {
+				background-color: var(--admin-redesign-surface-dark-secondary) !important;
+				border: none;
+				box-shadow: none;
+			}
+		}
+
+		& a {
+			border-radius: 2px;
+			overflow: clip;
+			padding: 8px 6px 8px 16px;
+	
+		}
+	}
+	
+	& .wp-menu-open {
+	
+		&::after {
+			display: none;
+		}
+	}
+	
+	& .wp-submenu {
+		width: 100% !important;
+	}
+}
+

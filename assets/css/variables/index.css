@@ -1,0 +1,13 @@
+:root {
+	--admin-redesign-surface-dark-primary: #1e1e1e;
+	--admin-redesign-surface-dark-secondary: #2f2f2f;
+	--admin-redesign-surface-light-primary: #fff;
+	--admin-redesign-surface-light-secondary: #f8f8f8;
+	--admin-redesign-surface-light-tertiary: #75757566;
+	--admin-redesign-border: #f0f0f0;
+	--admin-redesign-action-primary: #2271b1;
+}
+
+body.admin-color-modern {
+	--admin-redesign-action-primary: #3858e9;
+}

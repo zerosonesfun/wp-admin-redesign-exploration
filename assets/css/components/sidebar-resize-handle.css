@@ -1,0 +1,44 @@
+#admin-sidebar-resize-handle {
+	align-items: center;
+	background-color: var(--admin-redesign-surface-light-tertiary);
+	border: 0;
+	border-radius: 4px;
+	cursor: col-resize;
+	display: flex;
+	height: 64px;
+	justify-content: flex-end;
+	padding: 0;
+	position: absolute;
+	right: 6px;
+	top: calc(50% - 32px);
+	transition: background-color 0.2s ease-in-out;
+	width: 4px;
+	z-index: 9999;
+
+	&:hover {
+		background-color: var(--admin-redesign-surface-light-secondary);
+
+		&::after {
+			background-color: transparent;
+			content: "";
+			height: 64px;
+			position: absolute;
+			right: -16px;
+			top: calc(50% - 32px);
+			width: 32px;
+		}
+	}
+
+	&.active {
+		background-color: var(--admin-redesign-action-primary);
+	}
+}
+
+/**
+ * Disable pointer events on the content area when the sidebar resize
+ * handle is active this is to prevent the mouse from entering the iframe
+ * within the block editor which would cause the resize event to get stuck
+ */
+body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
+	pointer-events: none;
+}
