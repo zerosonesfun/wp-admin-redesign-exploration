@@ -21,7 +21,8 @@
 		--wp-components-color-background: #f4a2a2;
 	}
 
-	&[aria-hidden="true"] {
+	&[aria-hidden="true"],
+	&.hidden {
 		display: none;
 	}
 }

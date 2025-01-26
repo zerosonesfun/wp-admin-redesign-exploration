@@ -289,7 +289,8 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 		--wp-components-color-background: #f4a2a2;
 	}
 
-.wp-core-ui .notice[class][aria-hidden="true"] {
+.wp-core-ui .notice[class][aria-hidden="true"],
+	.wp-core-ui .notice.hidden[class] {
 		display: none;
 	}
 
