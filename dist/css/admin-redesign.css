@@ -350,6 +350,7 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 		}
 
 #adminmenu .wp-submenu {
+		padding: 4px;
 		width: 100% !important;
 	}
 
