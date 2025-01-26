@@ -11,13 +11,14 @@
 		&:focus {
 			background-color: var(--admin-redesign-surface-light-secondary);
 		}
+
+		&.button-secondary {
+			background-color: var(--admin-redesign-surface-light-primary);
+		}
+		
+		&.button-primary {
+			background-color: var(--admin-redesign-action-primary);
+		}
 	}
 
-	& .button-secondary {
-		background-color: var(--admin-redesign-surface-light-primary);
-	}
-	
-	& .button-primary {
-		background-color: var(--admin-redesign-action-primary);
-	}
 }
