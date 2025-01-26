@@ -145,12 +145,20 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	flex-direction: column;
 	gap: 4px;
 	grid-area: admin-menu;
+	height: calc(100dvh - var(--wp-admin--admin-bar--height));
 	justify-content: stretch;
+	overflow-y: scroll;
 	padding-top: 16px;
 	padding-bottom: 16px;
+	padding-bottom: 32px;
 	padding-left: 16px;
 	padding-right: 16px;
 }
+
+#adminmenu li.menu-top {
+		min-height: 0;
+		min-height: initial;
+	}
 
 #adminmenu .wp-submenu {
 	left: calc(var(--wp-sidebar-width) - 2 * 16px);

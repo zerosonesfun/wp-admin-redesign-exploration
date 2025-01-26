@@ -117,9 +117,16 @@ body.block-editor-page {
 	flex-direction: column;
 	gap: 4px;
 	grid-area: admin-menu;
+	height: calc(100dvh - var(--wp-admin--admin-bar--height));
 	justify-content: stretch;
+	overflow-y: scroll;
 	padding-block: 16px;
+	padding-block-end: 32px;
 	padding-inline: 16px;
+
+	& li.menu-top {
+		min-height: unset;
+	}
 }
 
 #adminmenu .wp-submenu {
