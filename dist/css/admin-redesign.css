@@ -1,0 +1,357 @@
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./assets/css/admin-redesign.css ***!
+  \***********************************************************************************************************************************************************************************/
+:root {
+	--admin-redesign-surface-dark-primary: #1e1e1e;
+	--admin-redesign-surface-dark-secondary: #2f2f2f;
+	--admin-redesign-surface-light-primary: #fff;
+	--admin-redesign-surface-light-secondary: #f8f8f8;
+	--admin-redesign-surface-light-tertiary: rgba(117,117,117,0.4);
+	--admin-redesign-border: #f0f0f0;
+	--admin-redesign-action-primary: #2271b1;
+}
+
+body.admin-color-modern {
+	--admin-redesign-action-primary: #3858e9;
+}
+
+:root {
+	--admin-redesign-surface-dark-primary: #1e1e1e;
+	--admin-redesign-surface-light-primary: #fff;
+}
+
+body {
+	background-color: var(--admin-redesign-surface-dark-primary) !important;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--wp--footer--height: 40px;
+	--wp-sidebar-width: 300px;
+}
+
+body.folded {
+		--wp-sidebar-width: 70px;
+	}
+
+#wpwrap {
+	display: grid;
+	grid-template-areas: "admin-menu admin-content" "footer footer";
+	grid-template-columns: var(--wp-sidebar-width) 1fr;
+	grid-template-rows: calc(100dvh - var(--wp-admin--admin-bar--height) - var(--wp--footer--height)) var(--wp--footer--height);
+	height: calc(100dvh - var(--wp-admin--admin-bar--height));
+	padding-right: 16px;
+	position: fixed;
+	top: var(--wp-admin--admin-bar--height);
+	width: 100%;
+
+}
+
+body.block-editor-page {
+	--wp--footer--height: 16px;
+}
+
+body.block-editor-page #wpwrap {
+		grid-template-areas: "admin-menu admin-content";
+		grid-template-columns: var(--wp-sidebar-width) 1fr;
+		grid-template-rows: calc(100dvh - var(--wp-admin--admin-bar--height));
+	}
+
+body.block-editor-page.is-fullscreen-mode #wpwrap {
+		display: block;
+		grid-template-areas: none;
+		grid-template-columns: initial;
+		grid-template-rows: initial;
+		height: 100vh;
+		padding-right: 0;
+		top: 0;
+	}
+
+body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
+		body.block-editor-page.is-fullscreen-mode #wpwrap #wpbody-content {
+			border-radius: 0;
+			height: 100%;
+			margin: 0;
+			overflow-y: auto;
+		}
+
+#wpcontent,
+#wpbody-content {
+	background-color: var(--admin-redesign-surface-light-primary) !important;
+	border-radius: 8px;
+	grid-area: admin-content;
+	height: calc(100dvh - var(--wp-admin--admin-bar--height) - var(--wp--footer--height));
+	margin: 0 !important;
+	overflow-y: scroll;
+	width: 100%;
+}
+
+#wpcontent .interface-interface-skeleton, #wpbody-content .interface-interface-skeleton {
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+	}
+
+#wpcontent .block-editor__container, #wpbody-content .block-editor__container {
+		min-height: 100%;
+	}
+
+#wpbody {
+	height: 100%;
+	overflow: scroll;
+}
+
+#wpfooter {
+	align-items: center;
+	color: var(--admin-redesign-surface-light-primary);
+	display: flex;
+	grid-area: footer;
+	justify-content: space-between;
+	margin-left: var(--wp-sidebar-width);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#wpfooter a {
+		color: var(--admin-redesign-surface-light-primary);
+	}
+
+#wpfooter .clear {
+		display: none;
+	}
+
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+	width: var(--wp-sidebar-width);
+}
+
+#adminmenumain {
+	position: relative;
+}
+
+#adminmenu {
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	grid-area: admin-menu;
+	justify-content: stretch;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+#adminmenu .wp-submenu {
+	left: calc(var(--wp-sidebar-width) - 2 * 16px);
+}
+
+.wp-menu-separator {
+	background-color: transparent !important;
+}
+
+#adminmenu a:hover,
+#adminmenu a:focus,
+.folded #adminmenu .wp-submenu-head:hover {
+	box-shadow: none;
+}
+
+.wp-list-table {
+	border: none !important;
+	border-collapse: collapse;
+	box-shadow: none !important;
+}
+
+.wp-list-table .widefat thead th,
+	.wp-list-table .widefat thead td {
+		border-bottom: 1px solid var(--admin-redesign-border) !important;
+	}
+
+.wp-list-table .widefat tfoot th,
+	.wp-list-table .widefat tfoot td {
+		border-bottom: none !important;
+		border-top: 1px solid var(--admin-redesign-border) !important;
+	}
+
+.wp-list-table tbody tr {
+		background-color: var(--admin-redesign-surface-light-primary) !important;
+		border-top: 1px solid var(--admin-redesign-border) !important;
+	}
+
+.wp-list-table tbody tr:last-child {
+			border-bottom: 1px solid var(--admin-redesign-border) !important;
+		}
+
+.wp-list-table tbody tr:hover {
+			background-color: var(--admin-redesign-surface-light-secondary) !important;
+		}
+
+.tablenav {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	height: -moz-fit-content;
+	height: fit-content;
+	width: 100%;
+}
+
+.tablenav.top {
+		margin-bottom: 12px;
+	}
+
+.tablenav.bottom {
+		margin-top: 12px;
+	}
+
+.tablenav .tablenav-pages {
+		float: none;
+		margin: 0;
+		margin-left: auto;
+	}
+
+#admin-sidebar-resize-handle {
+	align-items: center;
+	background-color: var(--admin-redesign-surface-light-tertiary);
+	border: 0;
+	border-radius: 4px;
+	cursor: col-resize;
+	display: flex;
+	height: 64px;
+	justify-content: flex-end;
+	padding: 0;
+	position: absolute;
+	right: 6px;
+	top: calc(50% - 32px);
+	transition: background-color 0.2s ease-in-out;
+	width: 4px;
+	z-index: 9999;
+}
+
+#admin-sidebar-resize-handle:hover {
+		background-color: var(--admin-redesign-surface-light-secondary);
+	}
+
+#admin-sidebar-resize-handle:hover::after {
+			background-color: transparent;
+			content: "";
+			height: 64px;
+			position: absolute;
+			right: -16px;
+			top: calc(50% - 32px);
+			width: 32px;
+		}
+
+#admin-sidebar-resize-handle.active {
+		background-color: var(--admin-redesign-action-primary);
+	}
+
+/**
+ * Disable pointer events on the content area when the sidebar resize
+ * handle is active this is to prevent the mouse from entering the iframe
+ * within the block editor which would cause the resize event to get stuck
+ */
+
+body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
+	pointer-events: none;
+}
+
+.wp-core-ui .notice[class] {
+	align-items: center;
+	background-color: var(--wp-components-color-background, #fff);
+	border: none;
+	border-left: 4px solid var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+	box-shadow: none;
+	display: flex;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 13px;
+	padding: 8px 12px;
+}
+
+.wp-core-ui .notice.updated[class],
+	.wp-core-ui .notice.notice-success[class] {
+		--wp-components-color-accent: #4ab866;
+		--wp-components-color-background: #eff9f1;
+	}
+
+.wp-core-ui .notice.error[class] {
+		--wp-components-color-accent: #cc1818;
+		--wp-components-color-background: #f4a2a2;
+	}
+
+.wp-core-ui .notice[class][aria-hidden="true"] {
+		display: none;
+	}
+
+.wp-core-ui .button[class],
+	.wp-core-ui .page-title-action {
+		border-radius: 2px;
+		padding: 6px 12px;
+	}
+
+.wp-core-ui .button-secondary {
+		background-color: var(--admin-redesign-surface-light-primary);
+	}
+
+.wp-core-ui .button-primary {
+		background-color: var(--admin-redesign-action-primary);
+	}
+
+.wp-core-ui input[type="text"],
+	.wp-core-ui input[type="password"],
+	.wp-core-ui input[type="color"],
+	.wp-core-ui input[type="date"],
+	.wp-core-ui input[type="datetime"],
+	.wp-core-ui input[type="datetime-local"],
+	.wp-core-ui input[type="email"],
+	.wp-core-ui input[type="month"],
+	.wp-core-ui input[type="number"],
+	.wp-core-ui input[type="search"],
+	.wp-core-ui input[type="tel"],
+	.wp-core-ui input[type="time"],
+	.wp-core-ui input[type="url"],
+	.wp-core-ui input[type="week"],
+	.wp-core-ui select,
+	.wp-core-ui textarea {
+		min-height: 42px;
+	}
+
+#adminmenu li:hover:where(:not(.wp-menu-separator)),
+		#adminmenu li:focus,
+		#adminmenu li.opensub {
+			background-color: var(--admin-redesign-surface-dark-secondary) !important;
+			border-radius: 2px;
+		}
+
+#adminmenu li:hover:where(:not(.wp-menu-separator)) > a.menu-top, #adminmenu li:focus > a.menu-top, #adminmenu li.opensub > a.menu-top {
+				background-color: var(--admin-redesign-surface-dark-secondary) !important;
+				border: none;
+				box-shadow: none;
+			}
+
+#adminmenu li a {
+			border-radius: 2px;
+			overflow: clip;
+			padding: 8px 6px 8px 16px;
+	
+		}
+
+#adminmenu .wp-menu-open::after {
+			display: none;
+		}
+
+#adminmenu .wp-submenu {
+		width: 100% !important;
+	}
+
+
+/*# sourceMappingURL=admin-redesign.css.map*/
