@@ -713,5 +713,10 @@ ul#adminmenu > li.current > a.current::after {
 				background-image: url('data:image/svg+xml,<svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.65993 1.25926L3.0012 3.53817L0.342468 1.25926L0.993259 0.5L3.0012 2.22109L5.00913 0.500001L5.65993 1.25926Z" fill="%23757575"/></svg>');
 			}
 
+.wp-pwd .wp-hide-pw {
+		border: 1px solid #8c8f94 !important;
+		border-left: none !important;
+	}
+
 
 /*# sourceMappingURL=admin-redesign.css.map*/
