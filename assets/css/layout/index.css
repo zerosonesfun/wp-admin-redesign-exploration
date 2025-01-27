@@ -84,7 +84,7 @@ body.block-editor-page {
 
 #wpfooter {
 	align-items: center;
-	color: var(--admin-redesign-surface-light-primary);
+	color: rgb(187.5, 187.5, 187.5);
 	display: flex;
 	grid-area: footer;
 	justify-content: space-between;
@@ -92,7 +92,11 @@ body.block-editor-page {
 	padding-inline: 0;
 
 	& a {
-		color: var(--admin-redesign-surface-light-primary);
+		color: rgb(187.5, 187.5, 187.5);
+
+		&:hover {
+			color: #fff;
+		}
 	}
 
 	& .clear {
