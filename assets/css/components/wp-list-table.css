@@ -6,12 +6,31 @@
 	&.widefat thead th,
 	&.widefat thead td {
 		border: unset !important;
-		font-weight: 600;
+		
+		& a {
+			align-items: center;
+			display: flex;
+			justify-content: flex-start;
+		}
+	}
+
+	& .manage-column,
+	& .manage-column a {
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.42;
 	}
 	
 	&.widefat tfoot th,
 	&.widefat tfoot td {
 		border: unset !important;
+
+		& a {
+			align-items: center;
+			display: flex;
+			justify-content: flex-start;
+		}
 	}
 
 	& th.sortable a,

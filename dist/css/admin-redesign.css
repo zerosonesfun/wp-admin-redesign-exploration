@@ -252,13 +252,32 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 .wp-list-table.widefat thead th,
 	.wp-list-table.widefat thead td {
 		border: unset !important;
-		font-weight: 600;
+	}
+
+.wp-list-table.widefat thead th a, .wp-list-table.widefat thead td a {
+			align-items: center;
+			display: flex;
+			justify-content: flex-start;
+		}
+
+.wp-list-table .manage-column,
+	.wp-list-table .manage-column a {
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.42;
 	}
 
 .wp-list-table.widefat tfoot th,
 	.wp-list-table.widefat tfoot td {
 		border: unset !important;
 	}
+
+.wp-list-table.widefat tfoot th a, .wp-list-table.widefat tfoot td a {
+			align-items: center;
+			display: flex;
+			justify-content: flex-start;
+		}
 
 .wp-list-table th.sortable a,
 	.wp-list-table th.sorted a,
@@ -614,6 +633,51 @@ ul#adminmenu > li.current > a.current::after {
 .media-frame-content {
 	inset-block-end: 73px !important;
 }
+
+.sorting-indicators {
+	gap: 2px;
+}
+
+.sorting-indicators .sorting-indicator {
+		height: 5px;
+		margin: 0;
+		position: relative;
+		width: 16px;
+	}
+
+.sorting-indicators .sorting-indicator::before {
+			align-items: center;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: "";
+			display: inline-flex;
+			height: 100%;
+			inset: unset;
+			justify-content: center;
+			margin-inline-start: 4px;
+			opacity: 0.5;
+			position: absolute;
+			width: 100%;
+		}
+
+.sorted.asc :is(.sorting-indicators .sorting-indicator.asc)::before {
+				opacity: 1;
+			}
+
+.sorting-indicators .sorting-indicator.asc::before {
+
+				background-image: url('data:image/svg+xml,<svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.342529 2.77891L3.00125 0.5L5.65999 2.77891L5.0092 3.53817L3.00125 1.81708L0.993321 3.53817L0.342529 2.77891Z" fill="%23929292"/></svg>');
+			}
+
+.sorted.desc :is(.sorting-indicators .sorting-indicator.desc)::before {
+				opacity: 1;
+			}
+
+.sorting-indicators .sorting-indicator.desc::before {
+
+				background-image: url('data:image/svg+xml,<svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.65993 1.25926L3.0012 3.53817L0.342468 1.25926L0.993259 0.5L3.0012 2.22109L5.00913 0.500001L5.65993 1.25926Z" fill="%23757575"/></svg>');
+			}
 
 
 /*# sourceMappingURL=admin-redesign.css.map*/
