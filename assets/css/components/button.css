@@ -12,6 +12,10 @@
 			background-color: var(--admin-redesign-surface-light-secondary);
 		}
 
+		&:active {
+			padding: 6px 12px;
+		}
+
 		&.button-secondary {
 			background-color: var(--admin-redesign-surface-light-primary);
 		}

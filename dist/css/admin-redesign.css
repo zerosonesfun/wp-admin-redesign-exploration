@@ -339,6 +339,10 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 			background-color: var(--admin-redesign-surface-light-secondary);
 		}
 
+:is(.wp-core-ui .button[class],.wp-core-ui .page-title-action):active {
+			padding: 6px 12px;
+		}
+
 .button-secondary:is(.wp-core-ui .button[class],.wp-core-ui .page-title-action) {
 			background-color: var(--admin-redesign-surface-light-primary);
 		}
