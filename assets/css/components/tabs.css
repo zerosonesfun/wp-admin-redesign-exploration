@@ -1,4 +1,5 @@
-.nav-tab-wrapper {
+.nav-tab-wrapper,
+.filter-links {
 	align-items: flex-end;
 	border-bottom: unset;
 	display: flex;
@@ -6,14 +7,18 @@
 	gap: 0;
 }
 
-.nav-tab {
-	align-items: flex-start;
+.nav-tab,
+.filter-links[class] a {
+	align-items: center;
 	background-color: transparent;
 	border: none;
 	border-bottom-color: transparent;
 	border-bottom-style: solid;
 	border-bottom-width: 2px !important;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	margin: 0;
 	margin: 0;
 	outline-offset: 2px;
 	padding-block: 8px;
@@ -27,6 +32,7 @@
 	}
 }
 
-.nav-tab-active {
+.nav-tab-active,
+.filter-links a.current {
 	border-bottom-color: var(--admin-redesign-action-primary) !important;
 }
