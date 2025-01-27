@@ -21,7 +21,6 @@ body {
 	position: fixed;
 	top: var(--wp-admin--admin-bar--height);
 	width: 100%;
-
 }
 
 body.block-editor-page {
@@ -111,17 +110,33 @@ body.block-editor-page {
 	position: relative;
 }
 
+#adminmenuwrap {
+	background-color: transparent;
+	height: calc(100dvh - var(--wp-admin--admin-bar--height));
+	overflow-y: scroll;
+	width: var(--wp-sidebar-width);
+	
+	&:has(.opensub) {
+		width: calc(2*var(--wp-sidebar-width));
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 #adminmenu {
 	align-items: stretch;
+	background-color: var(--admin-redesign-surface-dark-primary);
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
 	grid-area: admin-menu;
-	height: calc(100dvh - var(--wp-admin--admin-bar--height));
 	justify-content: stretch;
 	padding-block: 16px;
 	padding-block-end: 32px;
 	padding-inline: 16px;
+	width: var(--wp-sidebar-width);
 
 	& li.menu-top {
 		min-height: unset;

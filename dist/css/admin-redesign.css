@@ -49,7 +49,6 @@ body.folded {
 	position: fixed;
 	top: var(--wp-admin--admin-bar--height);
 	width: 100%;
-
 }
 
 body.block-editor-page {
@@ -138,17 +137,33 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	position: relative;
 }
 
+#adminmenuwrap {
+	background-color: transparent;
+	height: calc(100dvh - var(--wp-admin--admin-bar--height));
+	overflow-y: scroll;
+	width: var(--wp-sidebar-width);
+}
+
+#adminmenuwrap:has(.opensub) {
+		width: calc(2*var(--wp-sidebar-width));
+	}
+
+#adminmenuwrap::-webkit-scrollbar {
+		display: none;
+	}
+
 #adminmenu {
 	align-items: stretch;
+	background-color: var(--admin-redesign-surface-dark-primary);
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
 	grid-area: admin-menu;
-	height: calc(100dvh - var(--wp-admin--admin-bar--height));
 	justify-content: stretch;
 	padding-block: 16px;
 	padding-block-end: 32px;
 	padding-inline: 16px;
+	width: var(--wp-sidebar-width);
 }
 
 #adminmenu li.menu-top {
