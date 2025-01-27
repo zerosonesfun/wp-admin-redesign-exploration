@@ -18,7 +18,6 @@
 	.media-frame select,
 	textarea {
 		min-height: 42px;
-
 	}
 	
 	select,
@@ -33,7 +32,6 @@
 			box-shadow: 0 0 0 1px var(--admin-redesign-action-primary);
 			color: var(--admin-redesign-action-primary);
 		}
-
 	}
-
 }
+

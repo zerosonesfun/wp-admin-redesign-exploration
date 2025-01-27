@@ -92,8 +92,9 @@ __webpack_require__.r(__webpack_exports__);
 
 _wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_0___default()(() => {
   const adminSidebar = document.querySelector('#adminmenumain');
+  const isRTL = document.body.classList.contains('rtl');
   function resize(e) {
-    const width = e.clientX;
+    const width = isRTL ? window.innerWidth - e.clientX : e.clientX;
     document.body.classList.toggle('folded', width < 120);
     let newWidth = width;
 

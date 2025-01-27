@@ -2,9 +2,10 @@ import domReady from '@wordpress/dom-ready';
 
 domReady(() => {
 	const adminSidebar = document.querySelector('#adminmenumain');
+	const isRTL = document.body.classList.contains('rtl');
 
 	function resize(e) {
-		const width = e.clientX;
+		const width = isRTL ? window.innerWidth - e.clientX : e.clientX;
 		document.body.classList.toggle('folded', width < 120);
 		let newWidth = width;
 

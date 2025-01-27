@@ -56,6 +56,6 @@
 	& .tablenav-pages {
 		float: none;
 		margin: 0;
-		margin-left: auto;
+		margin-inline-start: auto;
 	}
 }
