@@ -15,7 +15,25 @@
 	input[type="url"],
 	input[type="week"],
 	select,
+	.media-frame select,
 	textarea {
 		min-height: 42px;
+
 	}
+	
+	select,
+	.media-frame select {
+
+		&:hover {
+			color: var(--admin-redesign-action-primary);
+		}
+		
+		&:focus {
+			border-color: var(--admin-redesign-action-primary);
+			box-shadow: 0 0 0 1px var(--admin-redesign-action-primary);
+			color: var(--admin-redesign-action-primary);
+		}
+
+	}
+
 }

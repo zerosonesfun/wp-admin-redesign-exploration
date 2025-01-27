@@ -179,15 +179,24 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	box-shadow: none !important;
 }
 
-.wp-list-table .widefat thead th,
-	.wp-list-table .widefat thead td {
-		border-bottom: 1px solid var(--admin-redesign-border) !important;
+.wp-list-table.widefat thead th,
+	.wp-list-table.widefat thead td {
+		border: medium none currentcolor !important;
+		border: initial !important;
+		font-weight: 600;
 	}
 
-.wp-list-table .widefat tfoot th,
-	.wp-list-table .widefat tfoot td {
-		border-bottom: none !important;
-		border-top: 1px solid var(--admin-redesign-border) !important;
+.wp-list-table.widefat tfoot th,
+	.wp-list-table.widefat tfoot td {
+		border: medium none currentcolor !important;
+		border: initial !important;
+	}
+
+.wp-list-table th.sortable a,
+	.wp-list-table th.sorted a,
+	.wp-list-table th.manage-column:where(:not(:has(a))) {
+		padding-top: 12px;
+		padding-bottom: 12px;
 	}
 
 .wp-list-table tbody tr {
@@ -201,6 +210,11 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 
 .wp-list-table tbody tr:hover {
 			background-color: var(--admin-redesign-surface-light-secondary) !important;
+		}
+
+.wp-list-table tbody tr td, .wp-list-table tbody tr th {
+			padding-top: 12px;
+			padding-bottom: 12px;
 		}
 
 .tablenav {
@@ -340,29 +354,70 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 	.wp-core-ui input[type="url"],
 	.wp-core-ui input[type="week"],
 	.wp-core-ui select,
+	.wp-core-ui .media-frame select,
 	.wp-core-ui textarea {
 		min-height: 42px;
+
 	}
 
-#adminmenu li:hover:where(:not(.wp-menu-separator)),
-		#adminmenu li:focus,
-		#adminmenu li.opensub {
-			background-color: var(--admin-redesign-surface-dark-secondary) !important;
-			border-radius: 2px;
+.wp-core-ui select:hover, .wp-core-ui .media-frame select:hover {
+			color: var(--admin-redesign-action-primary);
 		}
 
-#adminmenu li:hover:where(:not(.wp-menu-separator)) > a.menu-top, #adminmenu li:focus > a.menu-top, #adminmenu li.opensub > a.menu-top {
+.wp-core-ui select:focus, .wp-core-ui .media-frame select:focus {
+			border-color: var(--admin-redesign-action-primary);
+			box-shadow: 0 0 0 1px var(--admin-redesign-action-primary);
+			color: var(--admin-redesign-action-primary);
+		}
+
+#adminmenu a:hover,
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+	background-color: transparent !important;
+}
+
+#adminmenu li.menu-top {
+		background-color: transparent !important;
+	}
+
+#adminmenu li.menu-top a.menu-top {
+			border: none;
+			border-radius: 2px;
+			box-shadow: none;
+		}
+
+#adminmenu li.menu-top:hover a.menu-top, #adminmenu li.menu-top:focus a.menu-top {
 				background-color: var(--admin-redesign-surface-dark-secondary) !important;
+			}
+
+#adminmenu li.menu-top:hover > a.menu-top.wp-has-current-submenu, #adminmenu li.menu-top:focus > a.menu-top.wp-has-current-submenu {
+				background-color: var(--admin-redesign-action-primary) !important;
+			}
+
+#adminmenu li.menu-top:hover,
+		#adminmenu li.menu-top:focus,
+		#adminmenu li.menu-top.opensub {
+			background-color: transparent !important;
+		}
+
+#adminmenu li.menu-top:hover > a.menu-top, #adminmenu li.menu-top:focus > a.menu-top, #adminmenu li.menu-top.opensub > a.menu-top {
 				border: none;
 				box-shadow: none;
 			}
 
-#adminmenu li a {
-			border-radius: 2px;
-			overflow: clip;
-			padding: 8px 6px 8px 16px;
-	
+#adminmenu li.menu-top.current a.menu-top {
+			background-color: var(--admin-redesign-action-primary) !important;
 		}
+
+#adminmenu .wp-menu-name {
+		padding: 8px 6px 8px 16px;
+	}
+
+#adminmenu a.menu-top {
+		border-radius: 2px;
+		overflow: clip;
+	}
 
 #adminmenu .wp-menu-open::after {
 			display: none;
@@ -371,6 +426,14 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 #adminmenu .wp-submenu {
 		padding: 4px;
 		width: 100% !important;
+	}
+
+#adminmenu .wp-submenu a {
+			border-radius: 2px;
+		}
+
+#adminmenu .wp-has-current-submenu .wp-submenu {
+		background-color: transparent;
 	}
 
 .theme-browser .themes {
@@ -428,6 +491,11 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 					height: auto;
 					width: 100%;
 				}
+
+.wp-filter {
+	border: none;
+	box-shadow: none;
+}
 
 
 /*# sourceMappingURL=admin-redesign.css.map*/

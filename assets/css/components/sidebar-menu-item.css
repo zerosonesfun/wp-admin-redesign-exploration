@@ -1,26 +1,56 @@
+#adminmenu a:hover,
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+	background-color: transparent !important;
+}
+
 #adminmenu {
 
-	& li {
+	& li.menu-top {
+		background-color: transparent !important;
 
-		&:hover:where(:not(.wp-menu-separator)),
+		& a.menu-top {
+			border: none;
+			border-radius: 2px;
+			box-shadow: none;
+		}
+
+		&:hover,
+		&:focus {
+
+			& a.menu-top {
+				background-color: var(--admin-redesign-surface-dark-secondary) !important;
+			}
+
+			& > a.menu-top.wp-has-current-submenu {
+				background-color: var(--admin-redesign-action-primary) !important;
+			}
+		}
+
+		&:hover,
 		&:focus,
 		&.opensub {
-			background-color: var(--admin-redesign-surface-dark-secondary) !important;
-			border-radius: 2px;
+			background-color: transparent !important;
 
 			& > a.menu-top {
-				background-color: var(--admin-redesign-surface-dark-secondary) !important;
 				border: none;
 				box-shadow: none;
 			}
 		}
 
-		& a {
-			border-radius: 2px;
-			overflow: clip;
-			padding: 8px 6px 8px 16px;
-	
+		&.current a.menu-top {
+			background-color: var(--admin-redesign-action-primary) !important;
 		}
+	}
+
+	& .wp-menu-name {
+		padding: 8px 6px 8px 16px;
+	}
+	
+	& a.menu-top {
+		border-radius: 2px;
+		overflow: clip;
 	}
 	
 	& .wp-menu-open {
@@ -33,6 +63,14 @@
 	& .wp-submenu {
 		padding: 4px;
 		width: 100% !important;
+
+		& a {
+			border-radius: 2px;
+		}
+	}
+	
+	& .wp-has-current-submenu .wp-submenu {
+		background-color: transparent;
 	}
 }
 
