@@ -455,6 +455,40 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 			color: var(--admin-redesign-action-primary);
 		}
 
+.wp-core-ui input[type="checkbox"] {
+		appearance: none;
+		border: 1px solid #cecece;
+		border-radius: 4px;
+		display: inline-flex;
+		height: 16px;
+		position: relative;
+		width: 16px;
+	}
+
+.wp-core-ui input[type="checkbox"]:checked {
+			align-items: center;
+			background-color: var(--admin-redesign-action-primary);
+			border-color: var(--admin-redesign-action-primary);
+			flex-direction: column;
+			justify-content: center;
+		}
+
+.wp-core-ui input[type="checkbox"]:checked::before {
+				content: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L4 8L1 5" stroke="%23F9FFFF" stroke-width="1.5"/></svg>');
+				height: 9px;
+				left: 50%;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 12px;
+			}
+
+.wp-core-ui input[type="radio"]:checked::before {
+		background-color: var(--admin-redesign-action-primary);
+	}
+
 #adminmenu a:hover,
 #adminmenu li.menu-top:hover,
 #adminmenu li.opensub > a.menu-top,
