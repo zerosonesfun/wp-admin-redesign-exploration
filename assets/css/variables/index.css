@@ -12,6 +12,12 @@ body.admin-color-modern {
 	--admin-redesign-action-primary: #3858e9;
 }
 
+body.admin-color-fresh {
+	--admin-redesign-surface-dark-primary: #1d2327;
+	--admin-redesign-surface-dark-secondary: #2c3338;
+	--admin-redesign-action-primary: #3858e9;
+}
+
 body.admin-color-light {
 	--admin-redesign-surface-dark-primary: #f5f5f5;
 	--admin-redesign-surface-dark-secondary: #e4e4e4;
