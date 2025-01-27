@@ -56,7 +56,7 @@ domReady(() => {
 		const isFolded = document.body.classList.contains('folded');
 		const newFolded = !isFolded;
 
-		localStorage.setItem('wp-admin-sidebar-width', newFolded ? 300 : 70);
+		localStorage.setItem('wp-admin-sidebar-width', newFolded ? 70 : 300);
 		document.documentElement.style.setProperty(
 			'--wp-sidebar-width',
 			newFolded ? '70px' : '300px',
