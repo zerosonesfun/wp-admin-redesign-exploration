@@ -195,6 +195,7 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 #adminmenuwrap {
 	background-color: transparent;
 	height: calc(100dvh - var(--wp-admin--admin-bar--height));
+	overflow-x: hidden;
 	overflow-y: scroll;
 	width: var(--admin-redesign-sidebar-width);
 }
