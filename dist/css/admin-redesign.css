@@ -51,6 +51,20 @@ body.folded {
 	width: 100%;
 }
 
+@media screen and (max-width: 782px) {
+
+#wpwrap {
+		display: block;
+		grid-template-areas: unset;
+		grid-template-columns: unset;
+		grid-template-rows: unset;
+		height: auto;
+		padding-inline-end: 0;
+		position: static;
+		top: unset;
+}
+	}
+
 body.block-editor-page {
 	--wp--footer--height: 16px;
 }
@@ -90,6 +104,16 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	width: 100%;
 }
 
+@media screen and (max-width: 782px) {
+
+#wpcontent,
+#wpbody-content {
+		border-radius: 0;
+		height: auto;
+		overflow: unset;
+}
+	}
+
 #wpcontent .interface-interface-skeleton, #wpbody-content .interface-interface-skeleton {
 		height: 100%;
 		inset-block-end: 0;
@@ -118,6 +142,15 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	margin-inline-start: var(--wp-sidebar-width);
 	padding-inline: 0;
 }
+
+@media screen and (max-width: 782px) {
+
+#wpfooter {
+		grid-area: unset;
+		inset: unset;
+		position: static;
+}
+	}
 
 #wpfooter a {
 		color: rgb(187.5, 187.5, 187.5);

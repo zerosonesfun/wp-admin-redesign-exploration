@@ -79,3 +79,26 @@ function wp_admin_redesign_admin_head() {
 	</script>
 	<?php
 }
+
+
+// remove the auto-fold class from the admin body classes
+add_filter( 'admin_body_class', 'wp_admin_redesign_remove_auto_fold_class' );
+
+/**
+ * Remove the auto-fold class from the admin body classes.
+ *
+ * @param string $classes The current body classes.
+ *
+ * @return array
+ */
+function wp_admin_redesign_remove_auto_fold_class( $classes ) {
+	$classes_array = explode( ' ', $classes );
+
+	$auto_fold_key = array_search( 'auto-fold', $classes_array, true );
+
+	if ( false !== $auto_fold_key ) {
+		unset( $classes_array[ $auto_fold_key ] );
+	}
+
+	return join( ' ', $classes_array );
+}

@@ -10,7 +10,6 @@ body {
 	}
 }
 
-
 #wpwrap {
 	display: grid;
 	grid-template-areas: "admin-menu admin-content" "footer footer";
@@ -21,6 +20,17 @@ body {
 	position: fixed;
 	top: var(--wp-admin--admin-bar--height);
 	width: 100%;
+
+	@media screen and (max-width: 782px) {
+		display: block;
+		grid-template-areas: unset;
+		grid-template-columns: unset;
+		grid-template-rows: unset;
+		height: auto;
+		padding-inline-end: 0;
+		position: static;
+		top: unset;
+	}
 }
 
 body.block-editor-page {
@@ -62,6 +72,12 @@ body.block-editor-page {
 	overflow-y: scroll;
 	width: 100%;
 
+	@media screen and (max-width: 782px) {
+		border-radius: 0;
+		height: auto;
+		overflow: unset;
+	}
+
 	& .interface-interface-skeleton {
 		height: 100%;
 		inset-block-end: 0;
@@ -90,6 +106,12 @@ body.block-editor-page {
 	justify-content: space-between;
 	margin-inline-start: var(--wp-sidebar-width);
 	padding-inline: 0;
+
+	@media screen and (max-width: 782px) {
+		grid-area: unset;
+		inset: unset;
+		position: static;
+	}
 
 	& a {
 		color: rgb(187.5, 187.5, 187.5);
