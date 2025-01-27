@@ -26,6 +26,11 @@ domReady(() => {
 			newWidth = 175;
 		}
 
+		// add a snap point at 300px
+		if (width > 290 && width < 310) {
+			newWidth = 300;
+		}
+
 		// add a max width of 500px to the sidebar
 		if (newWidth > 500) {
 			newWidth = 500;
