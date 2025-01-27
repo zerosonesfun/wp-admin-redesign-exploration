@@ -514,5 +514,13 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 	border-bottom-color: var(--admin-redesign-action-primary) !important;
 }
 
+.attachments-browser .media-toolbar {
+		height: 74px !important;
+	}
+
+.media-frame-content {
+	inset-block-end: 73px !important;
+}
+
 
 /*# sourceMappingURL=admin-redesign.css.map*/
