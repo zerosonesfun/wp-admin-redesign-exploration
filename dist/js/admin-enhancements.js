@@ -125,7 +125,7 @@ _wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_0___default()(() => {
 
     // store the new width in local storage
     localStorage.setItem('wp-admin-sidebar-width', newWidth);
-    document.documentElement.style.setProperty('--wp-sidebar-width', `${newWidth}px`);
+    document.documentElement.style.setProperty('--admin-redesign-sidebar-width', `${newWidth}px`);
   }
   if (adminSidebar) {
     const resizeHandle = document.createElement('div');
@@ -145,7 +145,7 @@ _wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_0___default()(() => {
     const isFolded = document.body.classList.contains('folded');
     const newFolded = !isFolded;
     localStorage.setItem('wp-admin-sidebar-width', newFolded ? 70 : 300);
-    document.documentElement.style.setProperty('--wp-sidebar-width', newFolded ? '70px' : '300px');
+    document.documentElement.style.setProperty('--admin-redesign-sidebar-width', newFolded ? '70px' : '300px');
   });
 });
 }();
