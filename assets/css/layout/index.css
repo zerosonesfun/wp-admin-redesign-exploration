@@ -120,6 +120,10 @@ body.block-editor-page {
 		width: calc(2*var(--wp-sidebar-width));
 	}
 
+	.folded & {
+		width: 300px !important;
+	}
+
 	&::-webkit-scrollbar {
 		display: none;
 	}

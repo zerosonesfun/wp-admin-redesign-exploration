@@ -5,6 +5,11 @@
 	background-color: transparent !important;
 }
 
+ul#adminmenu a.wp-has-current-submenu::after,
+ul#adminmenu > li.current > a.current::after {
+	display: none;
+}
+
 #adminmenu {
 
 	& li.menu-top {

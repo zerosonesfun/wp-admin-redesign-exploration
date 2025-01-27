@@ -148,6 +148,10 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 		width: calc(2*var(--wp-sidebar-width));
 	}
 
+.folded #adminmenuwrap {
+		width: 300px !important;
+	}
+
 #adminmenuwrap::-webkit-scrollbar {
 		display: none;
 	}
@@ -378,6 +382,11 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 #adminmenu li.opensub > a.menu-top,
 #adminmenu li > a.menu-top:focus {
 	background-color: transparent !important;
+}
+
+ul#adminmenu a.wp-has-current-submenu::after,
+ul#adminmenu > li.current > a.current::after {
+	display: none;
 }
 
 #adminmenu li.menu-top {

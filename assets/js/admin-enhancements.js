@@ -2,7 +2,13 @@ import domReady from '@wordpress/dom-ready';
 
 domReady(() => {
 	const adminSidebar = document.querySelector('#adminmenumain');
+	const collapseButton = document.querySelector('#collapse-button');
 	const isRTL = document.body.classList.contains('rtl');
+
+	const initialWidth = localStorage.getItem('wp-admin-sidebar-width') || 300;
+	if (initialWidth < 175) {
+		document.body.classList.add('folded');
+	}
 
 	function resize(e) {
 		const width = isRTL ? window.innerWidth - e.clientX : e.clientX;
@@ -16,7 +22,7 @@ domReady(() => {
 			newWidth = 70;
 		}
 
-		if (width < 175) {
+		if (width < 175 && width >= 120) {
 			newWidth = 175;
 		}
 
@@ -45,4 +51,15 @@ domReady(() => {
 			});
 		});
 	}
+
+	collapseButton.addEventListener('click', () => {
+		const isFolded = document.body.classList.contains('folded');
+		const newFolded = !isFolded;
+
+		localStorage.setItem('wp-admin-sidebar-width', newFolded ? 300 : 70);
+		document.documentElement.style.setProperty(
+			'--wp-sidebar-width',
+			newFolded ? '70px' : '300px',
+		);
+	});
 });
