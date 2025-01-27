@@ -41,18 +41,24 @@ add_filter( 'admin_enqueue_scripts', 'wp_admin_redesign_enqueue_scripts' );
  * Enqueue the admin redesign styles.
  */
 function wp_admin_redesign_enqueue_scripts() {
+	$style_asset_file = WP_ADMIN_REDESIGN_DIST_PATH . 'css/admin-redesign.asset.php';
+	$style_asset      = file_exists( $style_asset_file ) ? require $style_asset_file : [];
+
 	wp_enqueue_style(
 		'admin-redesign',
 		WP_ADMIN_REDESIGN_DIST_URL . 'css/admin-redesign.css',
-		[],
-		WP_ADMIN_REDESIGN_VERSION
+		$style_asset['dependencies'] ?? [],
+		$style_asset['version'] ?? time()
 	);
+
+	$script_asset_file = WP_ADMIN_REDESIGN_DIST_PATH . 'js/admin-enhancements.asset.php';
+	$script_asset      = file_exists( $script_asset_file ) ? require $script_asset_file : [];
 
 	wp_enqueue_script(
 		'admin-redesign',
 		WP_ADMIN_REDESIGN_DIST_URL . 'js/admin-enhancements.js',
-		[ 'wp-dom-ready' ],
-		time(),
+		$script_asset['dependencies'] ?? [],
+		$script_asset['version'] ?? time(),
 		[
 			'defer' => true,
 		]
