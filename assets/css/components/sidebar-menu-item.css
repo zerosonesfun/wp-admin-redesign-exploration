@@ -44,7 +44,7 @@ ul#adminmenu > li.current > a.current::after {
 			}
 		}
 
-		&.current a.menu-top {
+		&.wp-has-current-submenu a.menu-top {
 			background-color: var(--admin-redesign-action-primary) !important;
 		}
 	}

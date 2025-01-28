@@ -33,6 +33,11 @@
 	&.active {
 		background-color: var(--admin-redesign-action-primary);
 	}
+
+	#adminmenumain:has(.opensub) & {
+		background-color: transparent;
+		pointer-events: none;
+	}
 }
 
 /**

@@ -368,6 +368,11 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 		background-color: var(--admin-redesign-action-primary);
 	}
 
+#adminmenumain:has(.opensub) #admin-sidebar-resize-handle {
+		background-color: transparent;
+		pointer-events: none;
+	}
+
 /**
  * Disable pointer events on the content area when the sidebar resize
  * handle is active this is to prevent the mouse from entering the iframe
@@ -537,7 +542,7 @@ ul#adminmenu > li.current > a.current::after {
 				box-shadow: none;
 			}
 
-#adminmenu li.menu-top.current a.menu-top {
+#adminmenu li.menu-top.wp-has-current-submenu a.menu-top {
 			background-color: var(--admin-redesign-action-primary) !important;
 		}
 
