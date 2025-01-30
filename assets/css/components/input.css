@@ -51,8 +51,11 @@
 			justify-content: center;
 
 			&::before {
+				align-items: center;
 				content: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L4 8L1 5" stroke="%23F9FFFF" stroke-width="1.5"/></svg>');
-				height: 9px;
+				display: flex;
+				height: 14px;
+				justify-content: center;
 				left: 50%;
 				margin: 0;
 				padding: 0;

@@ -55,6 +55,14 @@ body {
 	--admin-redesign-sidebar-width: 300px;
 }
 
+html {
+	scroll-behavior: smooth;
+
+	@view-transition {
+		navigation: auto;
+	}
+}
+
 body.folded {
 		--admin-redesign-sidebar-width: 70px;
 	}
@@ -155,6 +163,7 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 #wpbody {
 	height: 100%;
 	overflow: scroll;
+	view-transition-name: wpbody;
 }
 
 #wpfooter {
@@ -229,6 +238,7 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	padding-block: 16px;
 	padding-block-end: 32px;
 	padding-inline: 16px;
+	view-transition-name: adminmenu;
 	width: var(--admin-redesign-sidebar-width);
 }
 
@@ -486,8 +496,11 @@ body:has(#admin-sidebar-resize-handle.active) #wpbody-content {
 		}
 
 .wp-core-ui input[type="checkbox"]:checked::before {
+				align-items: center;
 				content: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L4 8L1 5" stroke="%23F9FFFF" stroke-width="1.5"/></svg>');
-				height: 9px;
+				display: flex;
+				height: 14px;
+				justify-content: center;
 				left: 50%;
 				margin: 0;
 				padding: 0;
