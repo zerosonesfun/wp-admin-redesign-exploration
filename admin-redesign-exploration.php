@@ -103,3 +103,23 @@ function admin_redesign_remove_auto_fold_class( $classes ) {
 
 	return join( ' ', $classes_array );
 }
+
+// force #adminmenuwrap { height: 100vh; } because another plugin I use is trying to force height auto which breaks the menu. Adding to the CSS alone will not work for my installation. Hence, this.
+add_action('admin_head', function() {
+    echo '<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuWrap = document.getElementById("adminmenuwrap");
+      if (menuWrap) {
+        const applyHeight = () => {
+          menuWrap.style.setProperty("height", "100vh", "important");
+        };
+        applyHeight();
+        const observer = new MutationObserver(() => applyHeight());
+        observer.observe(menuWrap, {
+          attributes: true,
+          attributeFilter: ["style"],
+        });
+      }
+    });
+    </script>';
+});
