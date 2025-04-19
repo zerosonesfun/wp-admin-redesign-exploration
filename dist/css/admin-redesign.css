@@ -213,6 +213,7 @@ body.block-editor-page.is-fullscreen-mode #wpwrap #wpcontent,
 	overflow-x: hidden;
 	overflow-y: scroll;
 	width: var(--admin-redesign-sidebar-width);
+	height: 100vh !important; /* Wilcosky */
 }
 
 #adminmenuwrap:has(.opensub) {
