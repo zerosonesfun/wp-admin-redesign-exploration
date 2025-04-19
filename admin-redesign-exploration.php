@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Admin Redesign Exploration
  * Description: An exploratory plugin that applies some CSS tweaks to the WP Admin based on the Admin Redesign design project.
- * Version: 0.1.1
+ * Version: 0.1.2
  * Author: Fabian Kägy, Billy Wilcosky
  * Author URI: https://fabian-kaegy.com
  * Text Domain: admin-redesign-exploration
@@ -14,7 +14,7 @@
  */
 
 // Useful global constants.
-define( 'ADMIN_REDESIGN_VERSION', '0.1.1' );
+define( 'ADMIN_REDESIGN_VERSION', '0.1.2' );
 define( 'ADMIN_REDESIGN_URL', plugin_dir_url( __FILE__ ) );
 define( 'ADMIN_REDESIGN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ADMIN_REDESIGN_INC', ADMIN_REDESIGN_PATH . 'includes/' );
