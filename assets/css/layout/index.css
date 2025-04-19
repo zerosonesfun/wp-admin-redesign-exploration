@@ -150,10 +150,10 @@ body.block-editor-page {
 
 #adminmenuwrap {
 	background-color: transparent;
-	height: calc(100dvh - var(--wp-admin--admin-bar--height));
 	overflow-x: hidden;
 	overflow-y: scroll;
 	width: var(--admin-redesign-sidebar-width);
+	height: 100vh !important; /* Wilcosky */
 	
 	&:has(.opensub) {
 		width: calc(2*var(--admin-redesign-sidebar-width));
