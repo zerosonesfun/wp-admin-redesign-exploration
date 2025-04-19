@@ -14,7 +14,7 @@
  */
 
 // Useful global constants.
-define( 'ADMIN_REDESIGN_VERSION', '0.1.0' );
+define( 'ADMIN_REDESIGN_VERSION', '0.1.1' );
 define( 'ADMIN_REDESIGN_URL', plugin_dir_url( __FILE__ ) );
 define( 'ADMIN_REDESIGN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ADMIN_REDESIGN_INC', ADMIN_REDESIGN_PATH . 'includes/' );
