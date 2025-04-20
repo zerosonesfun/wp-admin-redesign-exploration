@@ -1,7 +1,9 @@
 # Admin Redesign Exploration
 ### (#adminmenuwrap height force fork)
 
-Currently, the only difference between this fork and the original is, due to a plugin I use, an important CSS rule was being overwritten. This fork forces #adminmenuwrap height 100vh, even if another plugin/code tries to change it.
+Differences between original and this fork:
+- #adminmenuwrap height 100vh (Certain admin plugins may try to change the height of the admin menu. This fixes that.)
+- iframe background transparent (Without this, areas such as the update page which uses an iframe have a dark background when they should have a light background in default mode.)
 
 Contributors: fabiankaegy (zerosonesfun for this forked version)
 Requires at least: 6.7
