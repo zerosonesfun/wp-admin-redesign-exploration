@@ -18,6 +18,10 @@ body {
 	}
 }
 
+.iframe {
+    background-color: transparent !important;
+}
+
 #wpwrap {
 	display: grid;
 	grid-template-areas: "admin-menu admin-content" "footer footer";
