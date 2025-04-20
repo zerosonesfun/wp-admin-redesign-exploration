@@ -44,6 +44,10 @@ body {
 	background-color: var(--admin-redesign-surface-dark-primary) !important;
 }
 
+.iframe {
+    background-color: transparent !important;
+}
+
 *,
 *::before,
 *::after {
