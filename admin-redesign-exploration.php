@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Admin Redesign Exploration
  * Description: An exploratory plugin that applies some CSS tweaks to the WP Admin based on the Admin Redesign design project.
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: Fabian Kägy, Billy Wilcosky
  * Author URI: https://fabian-kaegy.com
  * Text Domain: admin-redesign-exploration
